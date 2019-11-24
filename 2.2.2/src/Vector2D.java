@@ -30,5 +30,19 @@ public class Vector2D {
     public void print(){
         System.out.println("(" + String.format(Locale.US,"%.2f", vX) + ", " + String.format(Locale.US,"%.2f", vY) + ")");
     }
-
+    public double length(){
+        return(Math.sqrt(vX*vX + vY*vY));
+    }
+    public void add(Vector2D x){
+        vY = vY + x.vY;
+        vX = vX + x.vX;
+    }
+    public void sub(Vector2D x){
+        vY = vY - x.vY;
+        vX = vX - x.vX;
+    }
+    public void scale(double scaleFactor){
+        vY = vY * scaleFactor;
+        vX = vX * scaleFactor;
+    }
 }
